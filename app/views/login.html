@@ -1,0 +1,10 @@
+<div class="container centered">
+  <form name="loginForm" class="force-contain">
+    <div class="form-group">
+      <input type="text" ng-model="username" name="username" class="form-control" id="usr" placeholder="Type your username.." required>
+    </div>
+    <div class="form-group">
+			<button type="button" ng-disabled="!username" class="btn btn-lg btn-block theme text-white" ng-click="login(username)">Join the mychat Chat! </button>
+    </div>
+  </form>
+</div>

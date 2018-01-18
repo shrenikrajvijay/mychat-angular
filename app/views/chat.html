@@ -1,0 +1,41 @@
+<div class="full-height">
+	<div class="left">
+		<div class="theme full-height">
+			<div class="chat-header padd">
+				<div class="centered username">{{username}}</div>
+				<div ng-if="shouldClockBeShown()" class="centered">Online for {{clock}} min{{clock == 1 ? '' : 's'}} </div>
+			</div>
+			<div class="chat-list">
+				<div class="chat-item padd" ng-class="selectedRoom.id === x.id ? 'selectedList' : ''" ng-click="getChatRoom(x)" ng-repeat="x in chatRooms">{{x.name}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="right">
+		<div class="chat-header shadow">
+			<div class="centered align-center"> {{selectedRoom.name }} </div>
+			<div class="centered align-center">
+        <span ng-hide="!selectedRoom" ng-class="'theme-text'">{{username}}</span><span ng-hide="!selectedRoom || selectedRoom.users.length == 0">,</span>
+				<span ng-repeat="user in selectedRoom.users">{{user !== username ? user : ''}}{{($last || user === username) ? '' : ', '}}</span>
+			</div>
+		</div>
+		<div class="chat-body" scroll-bottom="messages">
+		<div ng-repeat="message in messages track by $index" ng-class="message.name === username ? 'align-right':'' ">
+			<div ng-class="message.name === username ? 'userline' : 'line'">
+				{{message.message}}
+			</div>
+			<reaction message="message"></reaction>
+			<div ng-if="message.name !== username" class="author"> {{message.name}} </div>
+		</div>
+		</div>
+		<div class="chat-footer shadow">
+			<div class="row full-height">
+  			<div class="col-sm-10 pushin">
+					<input type="text" ng-disabled="shouldInputMessageBoxBeDisabled()" name="message" ng-model="text" class="pushin form-control full-size" placeholder="Type a message..." required>
+				</div>
+  			<div class="col-sm-2 align-center pushin">
+					<button type="button" ng-disabled="shouldInputMessageBoxBeDisabled()" ng-click="sendMessage(text);" class="btn btn-primary-outline full-size">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

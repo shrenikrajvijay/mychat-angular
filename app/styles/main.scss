@@ -1,0 +1,181 @@
+@import 'variables.scss';
+
+.full-height {
+  height: 100%;
+}
+
+.theme {
+  background-color: $theme;
+  color: white;
+}
+
+html, body {
+  padding: 0;
+  @extend .full-height;
+}
+
+.left {
+  width: 300px;
+  float: left;
+  @extend .full-height;
+}
+
+.chat-header, .chat-footer {
+  height: $chat-header-and-footer;
+}
+
+.chat-body {
+  height: (100-(2*$chat-header-and-footer));
+  overflow: scroll;
+  background-color: $theme-gray;
+}
+
+.force-contain {
+  width:50%;
+  margin: 0 auto;
+}
+
+.reaction{
+  width: 50px;
+}
+
+.reaction-selector-wrapper {
+  position: absolute;
+  width: 220px;
+  right: 1px;
+}
+
+.reaction-wrapper {
+  float: right;
+  margin: 1%;
+}
+
+.line {
+  border: 0px solid #189d0e;
+  border-radius: 32px;
+  color: black !important;
+  display: inline-block;
+  margin: 10px 0 0;
+  padding: 9px 16px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  margin: 1% 1% 0% 1%;
+  background-color: white;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .line {
+    max-width: 100%;
+  }
+  .force-contain {
+    width:100%;
+    margin: 0 auto;
+  }
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+.userline {
+  border: 0px solid #189d0e;
+  border-radius: 32px;
+  color: white !important;
+  display: inline-block;
+  margin: 10px 0 0;
+  padding: 9px 16px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  margin: 1% 1% 0% 1%;
+  background-color: $theme;
+  max-width: 50%;
+  text-align: left;
+}
+
+.author {
+  border-radius: 32px;
+  padding: 0px 16px 16px 16px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+
+.chat-footer {
+  height: 15%;
+}
+
+.pushin {
+  padding: 25px;
+}
+
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  display: inline-block;
+  height: 100%;
+  padding: 40px;
+  width: 70%;
+}
+
+.chat-item {
+  height: 60px;
+  line-height: 60px;
+}
+
+.selectedList {
+  background-color: $theme-on-click;
+}
+
+.padd {
+  padding-left: 30px;
+}
+
+.chat-list {
+  bottom:0;
+  height:auto;
+}
+
+.shadow {
+  box-shadow: 0px 1px 5px #d8d8d8, 0px -1px 5px #d8d8d8;
+}
+
+.right {
+  @extend .full-height;
+}
+
+.theme-text {
+  color: $theme;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  margin: 0 auto;
+}
+
+.smiley {
+  width: 50px;
+  height: 50px;
+}
+
+.smiley-wrapper {
+  float: right;
+  margin: 1%;
+}
+
+.smiley-selector-wrapper {
+  width: 200px;
+  right: 100px;
+  position: absolute;
+}
+
+.smiley-selector{
+  display: inline
+}

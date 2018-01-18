@@ -1,0 +1,54 @@
+<h1><code ng:non-bindable="">ChatCtrl</code>
+<div><span class="hint">controller in module <code ng:non-bindable="">mychat</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="mychat-controller-page mychat-controller-chatctrl-page"><h3 id="description_chat-controller">Chat Controller.</h3>
+<p>This controller is used to do all the user related actions. It depends on $http, UserFactory, ChatFactory, $interval, $anchorScroll, $filter, $location, API services.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getchatroom">getChatRoom(Selected)</h3>
+<div class="getchatroom"><div class="getchatroom-page"><p>getRoom function is used to get all the messages from the selected room.</p>
+</div><h5 id="methods_getchatroom_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>Selected</td><td><a href="" class="label type-hint type-hint-room">Room</a></td><td><div class="getchatroom-page"><p>room</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_getrooms">getRooms()</h3>
+<div class="getrooms"><div class="getrooms-page"><p>getRooms function is used to make an api call to get all the available rooms.</p>
+</div></div>
+</li>
+<li><h3 id="methods_registersockets">registerSockets()</h3>
+<div class="registersockets"><div class="registersockets-page"><p>registerSockets function is used to listen for new messages in the chat room.</p>
+</div></div>
+</li>
+<li><h3 id="methods_sendmessage">sendMessage(Message)</h3>
+<div class="sendmessage"><div class="sendmessage-page"><p>sendMessage is used to send messages to the selected room</p>
+</div><h5 id="methods_sendmessage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>Message</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="sendmessage-page"><p>to send.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_shouldclockbeshown">shouldClockBeShown()</h3>
+<div class="shouldclockbeshown"><div class="shouldclockbeshown-page"><p>shouldClockBeShown function is used decide if the clock should be shown. If the time elapsed is less than 60 seconds, then it returns false; otherwise true;</p>
+</div></div>
+</li>
+<li><h3 id="methods_shouldinputmessageboxbedisabled">shouldInputMessageBoxBeDisabled()</h3>
+<div class="shouldinputmessageboxbedisabled"><div class="shouldinputmessageboxbedisabled-page"><p>shouldInputMessageBoxBeDisabled function is used to enable/disable input text for chats. If no room is selected, then the chat input box is disabled.</p>
+</div></div>
+</li>
+<li><h3 id="methods_tick">tick()</h3>
+<div class="tick"><div class="tick-page"><p>tick function is used to show the time elapsed since the user logged in.</p>
+</div></div>
+</li>
+</ul>
+</div>
+<div class="member property"><h2 id="properties">Properties</h2>
+<ul class="properties"><li><h3 id="properties_logintime">loginTime</h3>
+<div class="logintime"><div class="logintime-page"><p>The time user logged in.</p>
+</div></div>
+</li>
+<li><h3 id="properties_username">username</h3>
+<div class="username"><div class="username-page"><p>username variable is used to store the name of the user.</p>
+</div></div>
+</li>
+</ul>
+</div>
+</div>
